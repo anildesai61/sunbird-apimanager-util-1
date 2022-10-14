@@ -30,7 +30,7 @@ stages:
     displayName: Build
     pool:
       vmImage: $(vmImageName)
-  - job: Build
+  - job: test
     steps:
     - script: ./build.sh
   - job: Publish
