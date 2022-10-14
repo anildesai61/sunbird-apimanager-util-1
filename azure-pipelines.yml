@@ -30,11 +30,15 @@ stages:
     displayName: Build
     pool:
       vmImage: $(vmImageName)
+  - job: Build
     steps:
-    - task: ShellScript@2 
-      displayName: Run Shell Script
-      inputs:
-        scriptPath: build.sh
+    - script: ./build.sh
+  - job: Publish
+    steps:
+    - script: ./src/metadata.sh > metadata.json
+    - script: ARTIFACT_LABEL=bronze ./dockerPushToRepo.sh
+    - script: cat metadata.json
+    steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
       inputs:
