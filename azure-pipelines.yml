@@ -38,7 +38,6 @@ stages:
     - script: ./src/metadata.sh > metadata.json
     - script: ARTIFACT_LABEL=bronze ./dockerPushToRepo.sh
     - script: cat metadata.json
-    steps:
     - task: Docker@2
       displayName: Build and push an image to container registry
       inputs:
