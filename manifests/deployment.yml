@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: anildesaisunbirdapimanagerutil 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anildesaisunbirdapimanagerutil
+  template:
+    metadata:
+      labels:
+        app: anildesaisunbirdapimanagerutil 
+    spec:
+      containers:
+        - name: anildesaisunbirdapimanagerutil 
+          image: tesfrt.azurecr.io/anildesaisunbirdapimanagerutil
+          ports:
+          - containerPort: 8001
