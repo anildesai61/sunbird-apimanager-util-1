@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: sunbirdapimanagerutil 
-          image: tesfrt.azurecr.io/sunbirdapimanagerutil
+          image: tesfrt.azurecr.io/anildesaisunbirdapimanagerutil
           ports:
           - containerPort: 4000
