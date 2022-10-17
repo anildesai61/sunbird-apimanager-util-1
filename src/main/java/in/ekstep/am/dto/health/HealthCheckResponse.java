@@ -31,7 +31,6 @@ public class HealthCheckResponse {
         ", ver='" + ver + '\'' +
         ", ets=" + ets +
         ", params=" + params +
-        ", result=" + result +
         '}';
   }
 }
