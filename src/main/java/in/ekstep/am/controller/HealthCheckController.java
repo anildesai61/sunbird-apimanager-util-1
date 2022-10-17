@@ -46,10 +46,9 @@ public class HealthCheckController {
               format("RESPONSE CODE: {0}, BODY: {1}", response.code(), response.body().string()));
     } catch (Exception e) {
       log.error("ERROR WHEN DETERMINING HEALTH", e);
-  /*    return buildHealthCheckResponse(
+      return buildHealthCheckResponse(
               false, false, "INTERNAL_ERROR",
-              format("ERROR WHEN DETERMINING HEALTH. Msg: {0}", e.getMessage()));*/
-        return buildHealthCheckResponse(true, true, null, null);
+              format("ERROR WHEN DETERMINING HEALTH. Msg: {0}", e.getMessage()));
     } finally {
       Optional.ofNullable(response).ifPresent((res) -> res.body().close());
     }
