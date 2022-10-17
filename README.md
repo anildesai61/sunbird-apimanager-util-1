@@ -20,3 +20,5 @@ am.admin.api.jwt.keyprefix - In the key generation i am using the prefix of *dev
 Also update the secrets to reflect the path where you have created the keys
 ```
 3. docker-compose -f stack.yml up
+
+Test
