@@ -16,4 +16,4 @@ spec:
         - name: anildesaisunbirdapimanagerutil 
           image: tesfrt.azurecr.io/anildesaisunbirdapimanagerutil
           ports:
-          - containerPort: 8001
+          - containerPort: 4000
