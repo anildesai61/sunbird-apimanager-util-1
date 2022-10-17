@@ -28,8 +28,6 @@ public class HealthCheckResult {
     return "HealthCheckResult{" +
         "name='" + name + '\'' +
         ", healthy=" + healthy +
-        ", err=" + err +
-        ", errmsg=" + errmsg +
         '}';
   }
 }
